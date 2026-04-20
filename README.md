@@ -75,17 +75,17 @@ reticulate::py_install(packages = "umap-learn")
 
 ## 3. The Dataset
 
-This pipeline uses the **20k NSCLC (Non-Small Cell Lung Cancer) Dissociated Tumor Cells** dataset from 10x Genomics.
-
 | Property | Value |
 |---|---|
 | File format | `.h5` (HDF5 sparse matrix) |
 | Cells (approx.) | ~20,000 |
 | Sequencing | 3' gene expression (Next GEM Multiplex) |
-| Source | [10x Genomics Dataset Page](https://www.10xgenomics.com/datasets) |
+| Donors | 7 NSCLC patients |
+| License | Creative Commons Attribution 4.0 (CC BY 4.0) |
+| **Download** | [10x Genomics Official Dataset Page](https://www.10xgenomics.com/datasets/20k-mixture-of-nsclc-dtcs-from-7-donors-3-v3-1-with-intronic-reads-3-1-standard) |
 
-**To change the dataset**, update this line in the script with your own file path:
-
+> On the dataset page, scroll down to **"Output Files"** and download:
+> `20k_NSCLC_DTC_3p_nextgem_Multiplex_count_raw_feature_bc_matrix.h5`
 ```r
 # 👇 Change this path to point to your own .h5 file
 nsclc.sparse.m <- Read10X_h5(filename = "C:/Your/Path/To/your_file.h5")
